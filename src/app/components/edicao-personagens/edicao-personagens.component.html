@@ -1,0 +1,16 @@
+<h3>Personagens</h3>
+<br />
+<label for="nome">Nome: </label>
+<input type="text" name="nome" [(ngModel)]="nome" />
+<br />
+<label for="personagem">Ator/Atriz: </label>
+<input type="text" name="ator" [(ngModel)]="ator" />
+<button type="button" (click)="adicionarPersonagem()">
+  Adicionar
+</button>
+
+<app-lista-personagens
+  [personagens]="personagens"
+  (onClickEvent)="removerPersonagem($event)"
+>
+</app-lista-personagens>

@@ -1,0 +1,10 @@
+<div class="column">
+  <div class="botoes">
+    <a class="edit" (click)="mostrarForm()">&#9998;</a>
+    <a class="delete" (click)="deleteFilme(this.filme._id)">&times;</a>
+  </div>
+  <div class="card" (click)="mostrarDetalhes()">
+    <img alt="" [src]="filme.foto" />
+    <p>{{ filme.nome }}</p>
+  </div>
+</div>

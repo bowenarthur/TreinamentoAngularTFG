@@ -1,0 +1,25 @@
+<div class="app">
+  <app-header (mostrarFormEvent)="mostrarForm()"></app-header>
+  <app-lista-filmes
+    titulo="Últimos filmes"
+    [filmes]="filmes"
+    (mostrarDetalhesEvent)="mostrarDetalhes($event)"
+    (mostrarFormEvent)="mostrarForm($event)"
+  ></app-lista-filmes>
+
+  <div class="modal" *ngIf="openDetalhes">
+    <app-detalhes
+      [filme]="filme"
+      (fecharDetalhesEvent)="fecharDetalhes()"
+    ></app-detalhes>
+  </div>
+
+  <div class="modal" *ngIf="openForm">
+    <app-formulario
+      [filme]="filme"
+      (fecharFormEvent)="fecharForm()"
+    ></app-formulario>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

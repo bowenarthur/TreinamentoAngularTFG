@@ -1,0 +1,9 @@
+<a class="close" (click)="this.fecharDetalhes()"> &times; </a>
+<h4>{{ filme.nome }}</h4>
+<p>Sinopse: {{ filme.sinopse }}</p>
+<p>Categoria: {{ filme.categoria }}</p>
+<p>Duração: {{ filme.duracao }}</p>
+<p>Ano: {{ filme.ano }}</p>
+
+<app-lista-personagens [personagens]="filme.personagens">
+</app-lista-personagens>

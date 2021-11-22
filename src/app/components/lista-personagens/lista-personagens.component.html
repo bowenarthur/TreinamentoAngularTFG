@@ -1,0 +1,14 @@
+<table class="tabela" *ngIf="personagens && personagens.length > 0">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Ator/Atriz</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let personagem of personagens">
+    <tr (click)="onClick(personagem)">
+      <td>{{ personagem.nome }}</td>
+      <td>{{ personagem.ator }}</td>
+    </tr>
+  </tbody>
+</table>
